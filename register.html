@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Digital ID Project</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+          
+            margin: 0;
+            padding: 0;
+            background-color: #271f98;
+            background-image: url('register28.jpg'); /* Replace with your image file name */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            margin : 1;
+            padding : 1;
+            background-color: #f3f8fa;
+        }
+        </style>
+</head>
+<body>
+  
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form>
+            <div class="form-section">
+                <h2>Personal Details</h2>
+                    <label for="name">Name of the Student:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                           <label for="text">Register num:</label><br>
+                    <input type="text" id="Register no" name="Register no" required><br><br>
+                    <label for="dateInput">Date of Birth (DOB):</label><br>
+                    <input type="date" id="dateInput" name="dateInput" required><br><br>
+                    <label for="numberInput">Phone num:</label><br>
+                    <input type="text" id="numberInput" name="numberInput" maxlength="10" required><br><br>
+                    <label for="mail">mail of the Student:</label><br>
+                    <input type="Email" id="Email" name="Email" required><br><br>
+                    <label for="text">Blood Group:</label><br>
+                    <input type="text" id="Blood group" name="Blood group" required><br><br>
+            </table>
+                <h2>Parents Details</h2>
+
+                <!-- More input boxes for other personal details... -->
+            </div>
+            
+            <div class="form-section">
+                <input type="checkbox" id="trigger1" name="parentcheck" value="hidden1"/>
+                <label for="parentcheck"><b>Parents</b></label><br>
+                <input type="checkbox" id="trigger2" name="guardiancheck" value="hidden2"/>
+                <label for="guardiancheck"><b>Guardian</b></label><br>
+                <!-- More input boxes for parent/guardian details... -->
+            </div>
+            <div class="hidden1" style="display:none">
+                <label for="fathername"><b>Father Name:</b></label>
+                <input type="text" id="fathername" name="fathername" placeholder="Enter your Father Name"/> <br>
+                <label for="fatherno"><b>Father No  :</b></label>
+                <input type="text" id="fatherno" name="fatherno" placeholder="Enter your Father Number" maxlength="10" required> <br>
+                <label for="Mothername"><b>Mother Name:</b></label>
+                <input type="text" id="mothername" name="mothername" placeholder="Enter your Mother Name"/> <br>
+                <label for="Motherno"><b>Mother No  :</b></label>
+                <input type="text" id="Motherno" name="Motherno" placeholder="Enter your Mother Number" maxlength="10" required> <br> 
+            </div>
+            <div class="hidden2" style="display:none">
+                <label for="guardianname"><b> Guardian Name:</b></label>
+                <input type="text" id="guardianname" name="guardianname" placeholder="Enter your Guardian Name"/><br>
+                <label for="guardianno"><b> Guardian No:</b></label>
+                <input type="text" id="guardianno" name="guardianno" placeholder="Enter your Guardian Number"/><br>
+            </div>
+            
+            <div class="form-section">
+                <h2>Address & Other</h2>
+                    <label for="address">Address:</label><br>
+                    <textarea id="address" name="address" rows="3"></textarea><br><br>
+                <!-- More input boxes for other address details... -->
+                <label for="text">Year of Study:</label><br>
+                <input type="text" id="Year of Study" name="Year of Study" required><br><br>
+                <label for="name">Branch name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="name">Nationality:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="name">State:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+            </div>
+            <br>
+           
+        <!--    <div class="form-section">
+                <h2>Additional Information</h2>
+                // More input boxes for additional information... 
+            </div> -->
+            
+            <div class="form-section">
+                <h2>Upload Profile Photo</h2>
+                <div class="input-box">
+                    <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
+                </div>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="reset" class="restore-button">Restore</button>
+                <button type="submit" class="submit-button">Register</button>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('input[type="checkbox"]').click(function(){
+                        var inputValue = $(this).attr("value");
+                        $("." + inputValue).toggle();
+                    })
+                })
+            </script>
+        </form>
+    </div>
+</body>
+</html>
